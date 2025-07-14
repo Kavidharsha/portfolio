@@ -1,7 +1,7 @@
 /* Reset default styles */
-html {
-  scroll-behavior: smooth;
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
 * {
     margin: 0;
