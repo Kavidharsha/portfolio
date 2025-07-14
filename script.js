@@ -67,25 +67,26 @@ const roles = ["Kavi", "a Web Developer", "a Designer", "a Coder"];
   };
 
   const darkToggleBtn = document.getElementById("darkModeToggle");
-
-// On toggle click
-darkToggleBtn.addEventListener("click", function () {
-  document.body.classList.toggle("dark-mode");
-
-  // Save preference
-  if (document.body.classList.contains("dark-mode")) {
-    localStorage.setItem("theme", "dark");
-  } else {
-    localStorage.setItem("theme", "light");
-  }
-});
-
-// On load, apply saved preference
-window.addEventListener("DOMContentLoaded", () => {
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark") {
-    document.body.classList.add("dark-mode");
-  }
-});
-
+  const toggleIcon = document.getElementById("toggleIcon");
+  
+  // On click toggle theme + icon
+  darkToggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  
+    const isDark = document.body.classList.contains("dark-mode");
+    toggleIcon.textContent = isDark ? "☀️" : "🌙";
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  });
+  
+  // On load, check saved theme
+  window.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme");
+  
+    if (savedTheme === "dark") {
+      document.body.classList.add("dark-mode");
+      toggleIcon.textContent = "☀️";
+    } else {
+      toggleIcon.textContent = "🌙";
+    }
+  });
   
