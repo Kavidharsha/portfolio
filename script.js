@@ -69,16 +69,7 @@ const roles = ["Kavi", "a Web Developer", "a Designer", "a Coder"];
   const darkToggleBtn = document.getElementById("darkModeToggle");
   const toggleIcon = document.getElementById("toggleIcon");
   
-  // On click toggle theme + icon
-  darkToggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-  
-    const isDark = document.body.classList.contains("dark-mode");
-    toggleIcon.textContent = isDark ? "☼" : "⏾";
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-  });
-  
-  // On load, check saved theme
+  // Load saved theme on page load
   window.addEventListener("DOMContentLoaded", () => {
     const savedTheme = localStorage.getItem("theme");
   
@@ -86,6 +77,20 @@ const roles = ["Kavi", "a Web Developer", "a Designer", "a Coder"];
       document.body.classList.add("dark-mode");
       toggleIcon.textContent = "☼";
     } else {
+      document.body.classList.remove("dark-mode");
+      toggleIcon.textContent = "⏾";
+    }
+  });
+  
+  // Toggle dark mode on click
+  darkToggleBtn.addEventListener("click", () => {
+    const isDark = document.body.classList.toggle("dark-mode");
+  
+    if (isDark) {
+      localStorage.setItem("theme", "dark");
+      toggleIcon.textContent = "☼";
+    } else {
+      localStorage.setItem("theme", "light");
       toggleIcon.textContent = "⏾";
     }
   });
