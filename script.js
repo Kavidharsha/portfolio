@@ -66,3 +66,7 @@ const roles = ["Kavi", "a Web Developer", "a Designer", "a Coder"];
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   
+  document.getElementById("darkModeToggle").addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+  });
+  
