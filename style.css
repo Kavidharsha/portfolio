@@ -1,3 +1,4 @@
+/* Reset default styles */
 html {
   scroll-behavior: smooth;
 }
@@ -267,6 +268,11 @@ body.dark-mode .social-icons a:hover {
 .dark-toggle:hover {
   transform: scale(1.2);
   background-color: #00ffaa;
+}
+
+body.dark-mode .dark-toggle {
+  background-color: #ffdd00;
+  color: #000;
 }
 
 /* Back to top button */
