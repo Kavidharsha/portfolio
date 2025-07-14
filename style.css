@@ -234,16 +234,18 @@ html {
   color: #000;
   border: none;
   border-radius: 50%;
-  font-size: 20px;
-  padding: 10px 12px;
+  font-size: 22px;
+  padding: 10px;
   cursor: pointer;
-  z-index: 999;
+  z-index: 9999;
   box-shadow: 0 0 10px #00ffcc;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.3s ease;
   }
   
   .dark-toggle:hover {
     transform: scale(1.2);
+    background-color: #00ffaa;
+
   }
   
   body.dark-mode {
