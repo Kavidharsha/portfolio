@@ -74,7 +74,7 @@ const roles = ["Kavi", "a Web Developer", "a Designer", "a Coder"];
     document.body.classList.toggle("dark-mode");
   
     const isDark = document.body.classList.contains("dark-mode");
-    toggleIcon.textContent = isDark ? "☀️" : "🌙";
+    toggleIcon.textContent = isDark ? "☼" : "⏾";
     localStorage.setItem("theme", isDark ? "dark" : "light");
   });
   
@@ -84,9 +84,9 @@ const roles = ["Kavi", "a Web Developer", "a Designer", "a Coder"];
   
     if (savedTheme === "dark") {
       document.body.classList.add("dark-mode");
-      toggleIcon.textContent = "☀️";
+      toggleIcon.textContent = "☼";
     } else {
-      toggleIcon.textContent = "🌙";
+      toggleIcon.textContent = "⏾";
     }
   });
   
