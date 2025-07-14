@@ -1,0 +1,195 @@
+/* Reset default styles */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styling */
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0f0f0f;
+    color: #ffffff;
+    line-height: 1.6;
+  }
+  
+  /* Section styling */
+  section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  /* Home section */
+  #home {
+    background-color: #1a1a1a;
+  }
+  
+  #home h1 {
+    font-size: 3rem;
+    color: #00ffcc;
+  }
+  
+  #home p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #cccccc;
+  }
+  
+  /* About section */
+  #about {
+    background-color: #1f1f1f;
+  }
+  
+  #about h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ffdd00;
+  }
+  
+  /* Projects section */
+  #projects {
+    background-color: #2b2b2b;
+  }
+  
+  #projects h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff7b00;
+  }
+  
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Contact section */
+  #contact {
+    background-color: #1a1a1a;
+  }
+  
+  #contact h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #66ff66;
+  }
+  
+  #contact p {
+    margin: 10px 0;
+    color: #aaa;
+  }
+  
+  .project-card {
+    background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+  transition: transform 0.3s;
+    
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px) scale(1.03);
+
+  }
+  
+  .project-card h3 {
+    color: #00ffcc;
+    margin-bottom: 10px;
+  }
+  
+  .project-card p {
+    color: #ccc;
+    font-size: 0.95rem;
+  }
+
+  nav {
+    background-color: #111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+  }
+  
+  .navbar li a {
+    color: #00ffcc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .navbar li a:hover {
+    color: #ffffff;
+  }
+  .typewriter {
+    color: #00ffcc;
+    border-right: 2px solid #00ffcc;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  @media (max-width: 768px) {
+    .project-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .project-card {
+      width: 90%;
+    }
+  }
+  
+  #backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #00ffcc;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+  }
+  
+  #backToTop:hover {
+    background: #00e6b8;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(-45deg, #0f0f0f, #1f1f1f, #0f0f0f, #1f1f1f);
+    background-size: 400% 400%;
+    animation: bgMove 15s ease infinite;
+    color: #ffffff;
+    line-height: 1.6;
+  }
+  
+  @keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
