@@ -65,8 +65,27 @@ const roles = ["Kavi", "a Web Developer", "a Designer", "a Coder"];
   backToTop.onclick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-  
-  document.getElementById("darkModeToggle").addEventListener("click", function () {
-    document.body.classList.toggle("dark-mode");
-  });
+
+  const darkToggleBtn = document.getElementById("darkModeToggle");
+
+// On toggle click
+darkToggleBtn.addEventListener("click", function () {
+  document.body.classList.toggle("dark-mode");
+
+  // Save preference
+  if (document.body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
+});
+
+// On load, apply saved preference
+window.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-mode");
+  }
+});
+
   
